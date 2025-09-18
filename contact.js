@@ -294,9 +294,9 @@ exports.handler = async (event, context) => {
 
     // Prepare emails with enhanced error handling
     const adminEmail = {
-      to: process.env.SENDGRID_TO_EMAIL,
+      to: "nick@everguardgroup.com.au",
       from: {
-        email: process.env.SENDGRID_FROM_EMAIL,
+        email: "nick@everguardgroup.com.au",
         name: 'Everguard Intelligence Website'
       },
       subject: `🚨 NEW ${urgency.toUpperCase()} PRIORITY INQUIRY - ${name} - ${serviceDisplay}`,
