@@ -234,7 +234,7 @@ exports.handler = async (event, context) => {
 
     // Prepare emails
     const adminEmail = {
-      to: process.env.SENDGRID_TO_EMAIL,
+      to: "info@everguardgroup.com.au",
       from: {
         email: process.env.SENDGRID_FROM_EMAIL,
         name: 'Everguard Intelligence Website'
