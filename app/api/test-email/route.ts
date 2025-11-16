@@ -1,86 +1,81 @@
 
 import { NextRequest, NextResponse } from 'next/server'
-import sgMail from '@sendgrid/mail'
+import { sendAdminNotification, sendClientAcknowledgment } from '@/lib/resend'
 
 export const dynamic = "force-dynamic"
 
 export async function GET(req: NextRequest) {
   try {
     // Check if environment variables are set
-    if (!process.env.SENDGRID_API_KEY) {
+    const config = {
+      hasApiKey: !!process.env.RESEND_API_KEY,
+      apiKeyPrefix: process.env.RESEND_API_KEY?.substring(0, 10) + '...' || 'not set',
+      fromEmail: 'info@everguardgroup.com.au',
+      toEmail: 'info@everguardgroup.com.au'
+    }
+
+    if (!process.env.RESEND_API_KEY) {
       return NextResponse.json({ 
-        error: 'SENDGRID_API_KEY is missing',
-        config: {
-          hasApiKey: false,
-          hasFromEmail: !!process.env.SENDGRID_FROM_EMAIL,
-          hasToEmail: !!process.env.SENDGRID_TO_EMAIL,
-          fromEmail: process.env.SENDGRID_FROM_EMAIL || 'not set',
-          toEmail: process.env.SENDGRID_TO_EMAIL || 'not set'
-        }
+        error: 'RESEND_API_KEY is missing',
+        message: 'Please configure your Resend API key in the environment variables',
+        config
       }, { status: 400 })
     }
 
-    if (!process.env.SENDGRID_FROM_EMAIL) {
-      return NextResponse.json({ 
-        error: 'SENDGRID_FROM_EMAIL is missing' 
-      }, { status: 400 })
+    // Test both admin and client emails
+    const testData = {
+      name: 'Test User',
+      email: 'info@everguardgroup.com.au', // Send client email to your address for testing
+      phone: '1300 718 760',
+      service: 'Surveillance Services',
+      message: 'This is a test submission to verify email functionality with Resend.',
+      inquiryId: 'TEST-' + Date.now()
     }
 
-    if (!process.env.SENDGRID_TO_EMAIL) {
-      return NextResponse.json({ 
-        error: 'SENDGRID_TO_EMAIL is missing' 
-      }, { status: 400 })
-    }
+    // Test admin notification
+    console.log('Testing admin notification...')
+    const adminResult = await sendAdminNotification(testData)
+    console.log('Admin email result:', adminResult)
 
-    // Set API key
-    sgMail.setApiKey(process.env.SENDGRID_API_KEY)
+    // Test client acknowledgment  
+    console.log('Testing client acknowledgment...')
+    const clientResult = await sendClientAcknowledgment(testData)
+    console.log('Client email result:', clientResult)
 
-    // Test email
-    const msg = {
-      to: process.env.SENDGRID_TO_EMAIL,
-      from: {
-        email: process.env.SENDGRID_FROM_EMAIL,
-        name: 'Everguard Intelligence Test'
-      },
-      subject: 'SendGrid Test Email - Everguard Intelligence',
-      html: `
-        <div style="font-family: Arial, sans-serif; padding: 20px; background: #f4f4f4;">
-          <div style="max-width: 600px; margin: 0 auto; background: white; padding: 30px; border-radius: 10px;">
-            <h2 style="color: #DC2626;">SendGrid Test Email</h2>
-            <p>This is a test email to verify your SendGrid configuration is working correctly.</p>
-            <p><strong>Test Details:</strong></p>
-            <ul>
-              <li>From: ${process.env.SENDGRID_FROM_EMAIL}</li>
-              <li>To: ${process.env.SENDGRID_TO_EMAIL}</li>
-              <li>Time: ${new Date().toISOString()}</li>
-            </ul>
-            <p style="color: #10B981;">✅ If you received this email, your SendGrid configuration is working!</p>
-          </div>
-        </div>
-      `
-    }
-
-    const result = await sgMail.send(msg)
-    
     return NextResponse.json({ 
-      success: true, 
-      message: 'Test email sent successfully',
-      messageId: result[0].headers['x-message-id'],
-      config: {
-        fromEmail: process.env.SENDGRID_FROM_EMAIL,
-        toEmail: process.env.SENDGRID_TO_EMAIL
+      success: true,
+      message: 'Email tests completed successfully with Resend',
+      config,
+      results: {
+        adminEmail: {
+          success: !!adminResult.data?.id,
+          messageId: adminResult.data?.id || null,
+          error: adminResult.error || null
+        },
+        clientEmail: {
+          success: !!clientResult.data?.id,
+          messageId: clientResult.data?.id || null,
+          error: clientResult.error || null
+        }
+      },
+      testData: {
+        fromEmail: 'info@everguardgroup.com.au',
+        adminToEmail: 'info@everguardgroup.com.au',
+        clientToEmail: testData.email,
+        timestamp: new Date().toISOString()
       }
     })
     
   } catch (error: any) {
-    console.error('SendGrid test error:', error)
+    console.error('Resend test error:', error)
     
     return NextResponse.json({ 
-      error: 'Failed to send test email',
+      error: 'Failed to run email test',
       details: error.message,
       code: error.code,
       statusCode: error.response?.status,
-      body: error.response?.body
+      body: error.response?.body,
+      stack: error.stack
     }, { status: 500 })
   }
 }
