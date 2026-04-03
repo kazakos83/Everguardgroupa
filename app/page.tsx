@@ -147,13 +147,13 @@ export default function HomePage() {
         {/* Gold glow top-right */}
         <div className="absolute pointer-events-none" style={{
           top: '-15%', right: '-8%', width: '800px', height: '800px',
-          background: 'radial-gradient(circle, rgba(201,168,76,0.06) 0%, transparent 60%)',
+          background: 'radial-gradient(circle, rgba(0,200,200,0.06) 0%, transparent 60%)',
           filter: 'blur(80px)',
         }} aria-hidden="true" />
         {/* Secondary glow bottom-left */}
         <div className="absolute pointer-events-none" style={{
           bottom: '-10%', left: '-5%', width: '600px', height: '600px',
-          background: 'radial-gradient(circle, rgba(201,168,76,0.03) 0%, transparent 65%)',
+          background: 'radial-gradient(circle, rgba(0,200,200,0.03) 0%, transparent 65%)',
           filter: 'blur(70px)',
         }} aria-hidden="true" />
 
@@ -163,14 +163,14 @@ export default function HomePage() {
               <ScrollReveal>
                 <span className="inline-flex items-center gap-2.5 mb-8" style={{
                   fontFamily: 'var(--font-geist-sans)', fontSize: '11px', fontWeight: 700,
-                  letterSpacing: '0.10em', textTransform: 'uppercase', color: '#C9A84C',
-                  border: '1px solid rgba(201,168,76,0.22)', background: 'rgba(201,168,76,0.05)',
+                  letterSpacing: '0.10em', textTransform: 'uppercase', color: '#00C8C8',
+                  border: '1px solid rgba(0,200,200,0.22)', background: 'rgba(0,200,200,0.05)',
                   borderRadius: '5px', padding: '7px 14px',
                 }}>
                   <span style={{ position: 'relative', display: 'inline-flex', alignItems: 'center' }}>
                     <span style={{
                       display: 'inline-block', width: '7px', height: '7px', borderRadius: '50%',
-                      background: '#C9A84C', boxShadow: '0 0 8px rgba(201,168,76,0.9)',
+                      background: '#00C8C8', boxShadow: '0 0 8px rgba(0,200,200,0.9)',
                     }} />
                   </span>
                   Licensed Investigations &amp; Intelligence — Australia
@@ -215,8 +215,8 @@ export default function HomePage() {
                   {['Licensed investigators', 'Professional reporting', 'National coverage', 'Strict confidentiality'].map((item) => (
                     <div key={item} className="flex items-center gap-2">
                       <svg width="14" height="14" viewBox="0 0 14 14" fill="none" style={{ flexShrink: 0 }}>
-                        <circle cx="7" cy="7" r="7" fill="rgba(201,168,76,0.12)" />
-                        <path d="M4 7L6.2 9.2L10 5" stroke="#C9A84C" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
+                        <circle cx="7" cy="7" r="7" fill="rgba(0,200,200,0.12)" />
+                        <path d="M4 7L6.2 9.2L10 5" stroke="#00C8C8" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
                       <span className="text-sm font-semibold" style={{ color: 'rgba(255,255,255,0.45)' }}>{item}</span>
                     </div>
@@ -228,19 +228,19 @@ export default function HomePage() {
             {/* Hero SVG — Case Dashboard Mockup */}
             <div className="hidden lg:flex items-center justify-center relative" style={{ height: '520px' }}>
               <ScrollReveal direction="right">
-                <div style={{ position: 'absolute', inset: '10%', background: 'radial-gradient(ellipse, rgba(201,168,76,0.05) 0%, transparent 70%)', filter: 'blur(40px)', pointerEvents: 'none' }} aria-hidden="true" />
+                <div style={{ position: 'absolute', inset: '10%', background: 'radial-gradient(ellipse, rgba(0,200,200,0.05) 0%, transparent 70%)', filter: 'blur(40px)', pointerEvents: 'none' }} aria-hidden="true" />
                 <svg viewBox="0 0 520 500" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ width: '100%', height: '100%', overflow: 'visible' }} aria-hidden="true">
                   <defs>
                     <radialGradient id="hero-glow" cx="50%" cy="45%" r="55%">
-                      <stop offset="0%" stopColor="#C9A84C" stopOpacity="0.08" />
-                      <stop offset="100%" stopColor="#C9A84C" stopOpacity="0" />
+                      <stop offset="0%" stopColor="#00C8C8" stopOpacity="0.08" />
+                      <stop offset="100%" stopColor="#00C8C8" stopOpacity="0" />
                     </radialGradient>
                     <filter id="card-shadow" x="-15%" y="-15%" width="130%" height="130%">
                       <feDropShadow dx="0" dy="6" stdDeviation="12" floodColor="#000000" floodOpacity="0.5" />
                     </filter>
                     <linearGradient id="bar-gold" x1="0%" y1="0%" x2="100%" y2="0%">
-                      <stop offset="0%" stopColor="#C9A84C" />
-                      <stop offset="100%" stopColor="#E8C97A" />
+                      <stop offset="0%" stopColor="#00C8C8" />
+                      <stop offset="100%" stopColor="#00E8E8" />
                     </linearGradient>
                     <linearGradient id="bar-green" x1="0%" y1="0%" x2="100%" y2="0%">
                       <stop offset="0%" stopColor="#22C55E" />
@@ -255,12 +255,12 @@ export default function HomePage() {
                   <ellipse cx="260" cy="240" rx="260" ry="230" fill="url(#hero-glow)" />
 
                   {/* Connector lines */}
-                  <line x1="200" y1="148" x2="92" y2="180" stroke="rgba(201,168,76,0.20)" strokeWidth="1" strokeDasharray="5 4" />
-                  <circle cx="92" cy="180" r="2.5" fill="#C9A84C" opacity="0.5" />
-                  <line x1="320" y1="148" x2="430" y2="168" stroke="rgba(201,168,76,0.20)" strokeWidth="1" strokeDasharray="5 4" />
-                  <circle cx="430" cy="168" r="2.5" fill="#C9A84C" opacity="0.5" />
-                  <line x1="260" y1="330" x2="200" y2="398" stroke="rgba(201,168,76,0.20)" strokeWidth="1" strokeDasharray="5 4" />
-                  <circle cx="200" cy="398" r="2.5" fill="#C9A84C" opacity="0.5" />
+                  <line x1="200" y1="148" x2="92" y2="180" stroke="rgba(0,200,200,0.20)" strokeWidth="1" strokeDasharray="5 4" />
+                  <circle cx="92" cy="180" r="2.5" fill="#00C8C8" opacity="0.5" />
+                  <line x1="320" y1="148" x2="430" y2="168" stroke="rgba(0,200,200,0.20)" strokeWidth="1" strokeDasharray="5 4" />
+                  <circle cx="430" cy="168" r="2.5" fill="#00C8C8" opacity="0.5" />
+                  <line x1="260" y1="330" x2="200" y2="398" stroke="rgba(0,200,200,0.20)" strokeWidth="1" strokeDasharray="5 4" />
+                  <circle cx="200" cy="398" r="2.5" fill="#00C8C8" opacity="0.5" />
 
                   {/* Main dashboard card */}
                   <g filter="url(#card-shadow)">
@@ -278,7 +278,7 @@ export default function HomePage() {
 
                     {/* Case rows */}
                     <text x="124" y="148" fill="rgba(255,255,255,0.55)" fontSize="10" fontFamily="Inter, system-ui, sans-serif">Active Cases</text>
-                    <text x="380" y="148" fill="#C9A84C" fontSize="10" fontFamily="Inter, system-ui, sans-serif" fontWeight="700" textAnchor="end">24</text>
+                    <text x="380" y="148" fill="#00C8C8" fontSize="10" fontFamily="Inter, system-ui, sans-serif" fontWeight="700" textAnchor="end">24</text>
                     <rect x="124" y="153" width="256" height="6" rx="3" fill="rgba(255,255,255,0.05)" />
                     <rect x="124" y="153" width="200" height="6" rx="3" fill="url(#bar-gold)" />
 
@@ -293,44 +293,44 @@ export default function HomePage() {
                     <rect x="124" y="221" width="218" height="6" rx="3" fill="url(#bar-blue)" />
 
                     <text x="124" y="250" fill="rgba(255,255,255,0.55)" fontSize="10" fontFamily="Inter, system-ui, sans-serif">Evidence Compliance</text>
-                    <text x="380" y="250" fill="#C9A84C" fontSize="10" fontFamily="Inter, system-ui, sans-serif" fontWeight="700" textAnchor="end">100%</text>
+                    <text x="380" y="250" fill="#00C8C8" fontSize="10" fontFamily="Inter, system-ui, sans-serif" fontWeight="700" textAnchor="end">100%</text>
                     <rect x="124" y="255" width="256" height="6" rx="3" fill="rgba(255,255,255,0.05)" />
                     <rect x="124" y="255" width="256" height="6" rx="3" fill="url(#bar-gold)" />
 
-                    <rect x="100" y="307" width="320" height="23" rx="0" fill="rgba(201,168,76,0.04)" />
+                    <rect x="100" y="307" width="320" height="23" rx="0" fill="rgba(0,200,200,0.04)" />
                     <text x="124" y="322" fill="rgba(255,255,255,0.25)" fontSize="8.5" fontFamily="Inter, system-ui, sans-serif">Last updated: just now</text>
-                    <text x="380" y="322" fill="rgba(201,168,76,0.5)" fontSize="8.5" fontFamily="Inter, system-ui, sans-serif" textAnchor="end">All states active</text>
+                    <text x="380" y="322" fill="rgba(0,200,200,0.5)" fontSize="8.5" fontFamily="Inter, system-ui, sans-serif" textAnchor="end">All states active</text>
                   </g>
 
                   {/* Side card — Surveillance */}
                   <g filter="url(#card-shadow)">
-                    <rect x="14" y="168" width="154" height="76" rx="6" fill="#112240" stroke="rgba(201,168,76,0.22)" strokeWidth="1" />
-                    <rect x="26" y="182" width="28" height="28" rx="6" fill="rgba(201,168,76,0.10)" stroke="rgba(201,168,76,0.28)" strokeWidth="1" />
-                    <circle cx="40" cy="196" r="7" fill="none" stroke="#C9A84C" strokeWidth="1.2" />
-                    <circle cx="40" cy="196" r="2.5" fill="#C9A84C" opacity="0.6" />
-                    <line x1="45" y1="201" x2="48" y2="204" stroke="#C9A84C" strokeWidth="1.2" strokeLinecap="round" />
+                    <rect x="14" y="168" width="154" height="76" rx="6" fill="#112240" stroke="rgba(0,200,200,0.22)" strokeWidth="1" />
+                    <rect x="26" y="182" width="28" height="28" rx="6" fill="rgba(0,200,200,0.10)" stroke="rgba(0,200,200,0.28)" strokeWidth="1" />
+                    <circle cx="40" cy="196" r="7" fill="none" stroke="#00C8C8" strokeWidth="1.2" />
+                    <circle cx="40" cy="196" r="2.5" fill="#00C8C8" opacity="0.6" />
+                    <line x1="45" y1="201" x2="48" y2="204" stroke="#00C8C8" strokeWidth="1.2" strokeLinecap="round" />
                     <text x="62" y="194" fill="rgba(255,255,255,0.4)" fontSize="8" fontFamily="Inter, system-ui, sans-serif" fontWeight="600" letterSpacing="0.06em">SURVEILLANCE OPS</text>
                     <text x="62" y="212" fill="#FFFFFF" fontSize="22" fontFamily="Inter, system-ui, sans-serif" fontWeight="800" letterSpacing="-0.03em">12</text>
-                    <text x="62" y="226" fill="rgba(201,168,76,0.8)" fontSize="8.5" fontFamily="Inter, system-ui, sans-serif" fontWeight="600">active this week</text>
+                    <text x="62" y="226" fill="rgba(0,200,200,0.8)" fontSize="8.5" fontFamily="Inter, system-ui, sans-serif" fontWeight="600">active this week</text>
                   </g>
 
-                  <circle cx="154" cy="175" r="3.5" fill="#C9A84C" opacity="0.8">
+                  <circle cx="154" cy="175" r="3.5" fill="#00C8C8" opacity="0.8">
                     <animate attributeName="opacity" values="0.8;0.25;0.8" dur="2.4s" repeatCount="indefinite" />
                   </circle>
 
                   {/* Side card — Turnaround */}
                   <g filter="url(#card-shadow)">
-                    <rect x="352" y="156" width="154" height="76" rx="6" fill="#112240" stroke="rgba(201,168,76,0.22)" strokeWidth="1" />
-                    <rect x="364" y="170" width="28" height="28" rx="6" fill="rgba(201,168,76,0.10)" stroke="rgba(201,168,76,0.28)" strokeWidth="1" />
-                    <circle cx="378" cy="184" r="7" fill="none" stroke="#C9A84C" strokeWidth="1.3" />
-                    <line x1="378" y1="178" x2="378" y2="184" stroke="#C9A84C" strokeWidth="1.3" strokeLinecap="round" />
-                    <line x1="378" y1="184" x2="382" y2="187" stroke="#C9A84C" strokeWidth="1.3" strokeLinecap="round" />
+                    <rect x="352" y="156" width="154" height="76" rx="6" fill="#112240" stroke="rgba(0,200,200,0.22)" strokeWidth="1" />
+                    <rect x="364" y="170" width="28" height="28" rx="6" fill="rgba(0,200,200,0.10)" stroke="rgba(0,200,200,0.28)" strokeWidth="1" />
+                    <circle cx="378" cy="184" r="7" fill="none" stroke="#00C8C8" strokeWidth="1.3" />
+                    <line x1="378" y1="178" x2="378" y2="184" stroke="#00C8C8" strokeWidth="1.3" strokeLinecap="round" />
+                    <line x1="378" y1="184" x2="382" y2="187" stroke="#00C8C8" strokeWidth="1.3" strokeLinecap="round" />
                     <text x="400" y="182" fill="rgba(255,255,255,0.4)" fontSize="8" fontFamily="Inter, system-ui, sans-serif" fontWeight="600" letterSpacing="0.06em">AVG TURNAROUND</text>
-                    <text x="400" y="200" fill="#C9A84C" fontSize="20" fontFamily="Inter, system-ui, sans-serif" fontWeight="800" letterSpacing="-0.03em">&lt; 52h</text>
+                    <text x="400" y="200" fill="#00C8C8" fontSize="20" fontFamily="Inter, system-ui, sans-serif" fontWeight="800" letterSpacing="-0.03em">&lt; 52h</text>
                     <text x="400" y="215" fill="rgba(255,255,255,0.35)" fontSize="8.5" fontFamily="Inter, system-ui, sans-serif">report delivery</text>
                   </g>
 
-                  <circle cx="352" cy="163" r="3.5" fill="#C9A84C" opacity="0.7">
+                  <circle cx="352" cy="163" r="3.5" fill="#00C8C8" opacity="0.7">
                     <animate attributeName="opacity" values="0.7;0.2;0.7" dur="2.8s" repeatCount="indefinite" begin="0.6s" />
                   </circle>
 
@@ -350,10 +350,10 @@ export default function HomePage() {
                   </circle>
 
                   {/* Floating particles */}
-                  <circle cx="455" cy="290" r="2" fill="#C9A84C" opacity="0.25">
+                  <circle cx="455" cy="290" r="2" fill="#00C8C8" opacity="0.25">
                     <animate attributeName="opacity" values="0.25;0.6;0.25" dur="3.5s" repeatCount="indefinite" />
                   </circle>
-                  <circle cx="60" cy="340" r="1.5" fill="#C9A84C" opacity="0.3">
+                  <circle cx="60" cy="340" r="1.5" fill="#00C8C8" opacity="0.3">
                     <animate attributeName="opacity" values="0.3;0.7;0.3" dur="4s" repeatCount="indefinite" begin="1s" />
                   </circle>
                 </svg>
@@ -415,15 +415,15 @@ export default function HomePage() {
             {services.map((svc, i) => (
               <ScrollReveal key={svc.title} delay={i * 80}>
                 <Link href={svc.href} className="relative rounded-md p-7 flex flex-col card-corporate group block h-full" style={{ transition: 'border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease' }}>
-                  <div className="absolute left-0 top-8 bottom-8 w-0.5 rounded-r" style={{ background: 'linear-gradient(to bottom, transparent, #C9A84C, transparent)' }} aria-hidden="true" />
+                  <div className="absolute left-0 top-8 bottom-8 w-0.5 rounded-r" style={{ background: 'linear-gradient(to bottom, transparent, #00C8C8, transparent)' }} aria-hidden="true" />
                   <div className="w-10 h-10 flex items-center justify-center mb-5 shrink-0" style={{
-                    background: 'rgba(201,168,76,0.08)', border: '1px solid rgba(201,168,76,0.2)', borderRadius: '4px', color: '#C9A84C',
+                    background: 'rgba(0,200,200,0.08)', border: '1px solid rgba(0,200,200,0.2)', borderRadius: '4px', color: '#00C8C8',
                   }}>
                     {svc.icon}
                   </div>
                   <h3 className="font-display font-bold text-white text-lg mb-2" style={{ fontFamily: 'var(--font-geist-sans)', letterSpacing: '-0.01em' }}>{svc.title}</h3>
                   <p className="text-white/45 text-sm leading-relaxed mb-4 flex-1" style={{ fontFamily: 'var(--font-dm-sans)' }}>{svc.description}</p>
-                  <span className="text-sm font-semibold inline-flex items-center gap-1.5 mt-auto" style={{ color: '#C9A84C', fontFamily: 'var(--font-dm-sans)' }}>
+                  <span className="text-sm font-semibold inline-flex items-center gap-1.5 mt-auto" style={{ color: '#00C8C8', fontFamily: 'var(--font-dm-sans)' }}>
                     Learn More
                     <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round">
                       <path d="M2 6H10M6 2L10 6L6 10" />
@@ -459,19 +459,19 @@ export default function HomePage() {
               <ScrollReveal key={a.title} delay={i * 100}>
                 <div className="p-8 flex flex-col h-full" style={{
                   background: i === 0 ? '#112240' : '#0F1C30',
-                  border: i === 0 ? '1px solid rgba(201,168,76,0.3)' : '1px solid rgba(255,255,255,0.06)',
+                  border: i === 0 ? '1px solid rgba(0,200,200,0.3)' : '1px solid rgba(255,255,255,0.06)',
                   borderRadius: '6px',
-                  boxShadow: i === 0 ? '0 0 40px rgba(201,168,76,0.06)' : 'none',
+                  boxShadow: i === 0 ? '0 0 40px rgba(0,200,200,0.06)' : 'none',
                 }}>
                   {a.badge && (
                     <span className="text-xs font-bold px-2.5 py-1 rounded mb-4 self-start" style={{
-                      background: 'rgba(201,168,76,0.12)', color: '#C9A84C', border: '1px solid rgba(201,168,76,0.25)',
+                      background: 'rgba(0,200,200,0.12)', color: '#00C8C8', border: '1px solid rgba(0,200,200,0.25)',
                       fontFamily: 'var(--font-geist-sans)',
                     }}>{a.badge}</span>
                   )}
                   <h3 className="font-display font-bold text-white mb-3" style={{ fontSize: '20px', fontFamily: 'var(--font-geist-sans)' }}>{a.title}</h3>
                   <p className="text-white/45 text-sm leading-relaxed mb-6 flex-1" style={{ fontFamily: 'var(--font-dm-sans)' }}>{a.description}</p>
-                  <Link href={a.href} className="text-sm font-semibold inline-flex items-center gap-1.5" style={{ color: '#C9A84C' }}>
+                  <Link href={a.href} className="text-sm font-semibold inline-flex items-center gap-1.5" style={{ color: '#00C8C8' }}>
                     {a.cta}
                     <ArrowRight size={14} />
                   </Link>
@@ -485,7 +485,7 @@ export default function HomePage() {
       {/* ── How It Works / Process ────────────────────────────── */}
       <section id="process" className="py-24 lg:py-32 relative overflow-hidden" style={{ background: '#060D18' }}>
         <div className="absolute inset-0 pointer-events-none" style={{
-          background: 'radial-gradient(ellipse 70% 50% at 50% 0%, rgba(201,168,76,0.05), transparent 65%)',
+          background: 'radial-gradient(ellipse 70% 50% at 50% 0%, rgba(0,200,200,0.05), transparent 65%)',
         }} aria-hidden="true" />
 
         <div className="relative max-w-[1280px] mx-auto px-6 lg:px-8">
@@ -505,7 +505,7 @@ export default function HomePage() {
 
           <div className="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-0">
             {/* Connecting line */}
-            <div className="hidden lg:block absolute top-[88px] left-[12.5%] right-[12.5%] h-px pointer-events-none" style={{ background: 'rgba(201,168,76,0.25)' }} aria-hidden="true" />
+            <div className="hidden lg:block absolute top-[88px] left-[12.5%] right-[12.5%] h-px pointer-events-none" style={{ background: 'rgba(0,200,200,0.25)' }} aria-hidden="true" />
 
             {processSteps.map((step, i) => (
               <ScrollReveal key={step.num} delay={i * 120}>
@@ -518,27 +518,27 @@ export default function HomePage() {
 
                   {/* Circle icon */}
                   <div className="relative z-10 w-12 h-12 rounded-full flex items-center justify-center mb-5 shrink-0 transition-transform duration-300 group-hover:scale-110" style={{
-                    background: '#C9A84C', boxShadow: '0 0 24px rgba(201,168,76,0.35)', color: '#060D18',
+                    background: '#00C8C8', boxShadow: '0 0 24px rgba(0,200,200,0.35)', color: '#060D18',
                   }}>
                     {step.icon}
                   </div>
 
                   <span className="relative z-10 inline-block text-xs font-semibold mb-3 px-2 py-0.5 rounded" style={{
-                    color: '#C9A84C', background: 'rgba(201,168,76,0.08)', border: '1px solid rgba(201,168,76,0.25)',
+                    color: '#00C8C8', background: 'rgba(0,200,200,0.08)', border: '1px solid rgba(0,200,200,0.25)',
                     fontFamily: 'var(--font-geist-sans)', letterSpacing: '0.06em',
                   }}>{step.num}</span>
 
                   {/* Dot on connecting line */}
                   {i < 3 && (
                     <div className="hidden lg:block absolute right-0 top-[88px] w-2 h-2 rounded-full -translate-y-1/2 translate-x-1/2 z-20" style={{
-                      background: '#C9A84C', boxShadow: '0 0 8px rgba(201,168,76,0.6)',
+                      background: '#00C8C8', boxShadow: '0 0 8px rgba(0,200,200,0.6)',
                     }} aria-hidden="true" />
                   )}
 
                   <h3 className="relative z-10 font-display font-bold text-white text-lg mb-3" style={{ fontFamily: 'var(--font-geist-sans)', letterSpacing: '-0.01em' }}>{step.title}</h3>
                   <p className="relative z-10 text-white/55 text-sm leading-relaxed" style={{ fontFamily: 'var(--font-dm-sans)' }}>{step.description}</p>
 
-                  {i < 3 && <div className="lg:hidden mt-8 w-px h-8 self-center" style={{ background: 'rgba(201,168,76,0.3)' }} aria-hidden="true" />}
+                  {i < 3 && <div className="lg:hidden mt-8 w-px h-8 self-center" style={{ background: 'rgba(0,200,200,0.3)' }} aria-hidden="true" />}
                 </div>
               </ScrollReveal>
             ))}
@@ -549,7 +549,7 @@ export default function HomePage() {
       {/* ── Why Everguard ─────────────────────────────────────── */}
       <section className="py-24 lg:py-32 relative overflow-hidden" style={{ background: '#0D1B2E' }}>
         <div className="absolute inset-0 pointer-events-none" style={{
-          background: 'radial-gradient(ellipse 80% 60% at 60% 40%, rgba(201,168,76,0.06), transparent 65%)',
+          background: 'radial-gradient(ellipse 80% 60% at 60% 40%, rgba(0,200,200,0.06), transparent 65%)',
         }} aria-hidden="true" />
 
         <div className="relative max-w-[1280px] mx-auto px-6 lg:px-8">
@@ -573,7 +573,7 @@ export default function HomePage() {
               {whyItems.map((item, i) => (
                 <ScrollReveal key={item.title} delay={i * 80}>
                   <div className="p-5 h-full" style={{
-                    background: 'rgba(201,168,76,0.03)', border: '1px solid rgba(201,168,76,0.12)', borderRadius: '4px',
+                    background: 'rgba(0,200,200,0.03)', border: '1px solid rgba(0,200,200,0.12)', borderRadius: '4px',
                   }}>
                     <h4 className="font-semibold text-white mb-2 text-sm" style={{ fontFamily: 'var(--font-geist-sans)' }}>{item.title}</h4>
                     <p className="text-white/40 text-xs leading-relaxed" style={{ fontFamily: 'var(--font-dm-sans)' }}>{item.body}</p>
@@ -607,7 +607,7 @@ export default function HomePage() {
                 }}>
                   {/* Quote mark */}
                   <svg width="32" height="24" viewBox="0 0 32 24" fill="none" className="mb-5" style={{ opacity: 0.15 }}>
-                    <path d="M0 24V14.4C0 10.56 0.8 7.44 2.4 5.04C4.08 2.64 6.72 0.96 10.32 0L12 3.36C9.84 4.08 8.16 5.28 6.96 6.96C5.84 8.56 5.28 10.4 5.28 12.48H12V24H0ZM20 24V14.4C20 10.56 20.8 7.44 22.4 5.04C24.08 2.64 26.72 0.96 30.32 0L32 3.36C29.84 4.08 28.16 5.28 26.96 6.96C25.84 8.56 25.28 10.4 25.28 12.48H32V24H20Z" fill="#C9A84C" />
+                    <path d="M0 24V14.4C0 10.56 0.8 7.44 2.4 5.04C4.08 2.64 6.72 0.96 10.32 0L12 3.36C9.84 4.08 8.16 5.28 6.96 6.96C5.84 8.56 5.28 10.4 5.28 12.48H12V24H0ZM20 24V14.4C20 10.56 20.8 7.44 22.4 5.04C24.08 2.64 26.72 0.96 30.32 0L32 3.36C29.84 4.08 28.16 5.28 26.96 6.96C25.84 8.56 25.28 10.4 25.28 12.48H32V24H20Z" fill="#00C8C8" />
                   </svg>
                   <p className="text-white/60 text-sm leading-relaxed mb-6 flex-1" style={{ fontFamily: 'var(--font-dm-sans)' }}>
                     &ldquo;{t.quote}&rdquo;
@@ -627,7 +627,7 @@ export default function HomePage() {
       <section className="relative overflow-hidden" style={{ background: '#060D18' }}>
         <ScrollReveal>
           <div className="relative overflow-hidden">
-            <div className="absolute inset-0" style={{ background: 'linear-gradient(135deg, #C9A84C 0%, #8B6914 100%)' }} aria-hidden="true" />
+            <div className="absolute inset-0" style={{ background: 'linear-gradient(135deg, #00C8C8 0%, #8B6914 100%)' }} aria-hidden="true" />
             <div className="absolute inset-0 opacity-[0.04]" style={{
               backgroundImage: 'repeating-linear-gradient(0deg, white 0px, white 1px, transparent 1px, transparent 40px), repeating-linear-gradient(90deg, white 0px, white 1px, transparent 1px, transparent 40px)',
             }} aria-hidden="true" />
@@ -644,7 +644,7 @@ export default function HomePage() {
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
                 <Link href="/contact" className="inline-flex items-center justify-center gap-2 px-8 py-4 font-bold text-base" style={{
-                  background: '#060D18', color: '#C9A84C', borderRadius: '4px',
+                  background: '#060D18', color: '#00C8C8', borderRadius: '4px',
                   boxShadow: '0 4px 20px rgba(0,0,0,0.3)',
                 }}>
                   <Mail size={16} />

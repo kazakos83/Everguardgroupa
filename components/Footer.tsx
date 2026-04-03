@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 const services = [
   { label: 'Insurance Investigations', href: '/services' },
@@ -38,13 +39,13 @@ export default function Footer() {
           {/* Brand */}
           <div className="sm:col-span-2 lg:col-span-2">
             <Link href="/" className="inline-flex items-center gap-3 mb-5" aria-label="Everguard Group">
-              <svg width="26" height="26" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <path d="M14 2L4 6.5V13.5C4 19.2 8.4 24.6 14 26C19.6 24.6 24 19.2 24 13.5V6.5L14 2Z" fill="rgba(201,168,76,0.1)" stroke="#C9A84C" strokeWidth="1.5" strokeLinejoin="round"/>
-                <path d="M10 14L12.5 16.5L18 11" stroke="#C9A84C" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-              <span className="text-xl font-bold" style={{ fontFamily: 'var(--font-geist-sans)', letterSpacing: '0.06em', textTransform: 'uppercase' }}>
-                EVER<span style={{ color: '#C9A84C' }}>GUARD</span>
-              </span>
+              <Image
+                src="/everguard-logo.png"
+                alt="Everguard Group"
+                width={140}
+                height={32}
+                style={{ height: 'auto', width: 'auto', maxHeight: 32, objectFit: 'contain' }}
+              />
             </Link>
             <p className="text-white/50 text-sm leading-relaxed mb-3 max-w-[300px]" style={{ fontFamily: 'var(--font-dm-sans)' }}>
               Everguard Group Pty Ltd — Licensed investigations and intelligence services for insurance companies, law firms, and corporate clients across Australia.

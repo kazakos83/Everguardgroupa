@@ -7,8 +7,8 @@
   --bg-surface:   #0D1B2E;
   --bg-card:      #0F1C30;
   --border:       rgba(255, 255, 255, 0.07);
-  --brand-gold:   #C9A84C;
-  --brand-teal:   #00D4B4;
+  --brand-gold:   #00C8C8;
+  --brand-teal:   #00D4D4;
   --text-white:   #FFFFFF;
   --text-muted:   rgba(255, 255, 255, 0.6);
   --text-subtle:  rgba(255, 255, 255, 0.35);
@@ -27,7 +27,7 @@ body {
 @layer utilities {
   /* Gradient text */
   .text-gradient-gold {
-    background: linear-gradient(135deg, #C9A84C, #E8C97A);
+    background: linear-gradient(135deg, #00C8C8, #00E8E8);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -51,22 +51,22 @@ body {
     font-weight: 700;
     letter-spacing: 0.15em;
     text-transform: uppercase;
-    color: #C9A84C;
+    color: #00C8C8;
   }
 
   /* Primary CTA button — gold */
   .btn-primary {
-    background: #C9A84C;
-    color: #060D18;
+    background: #00C8C8;
+    color: #030810;
     font-weight: 700;
     border-radius: 4px;
     padding: 11px 22px;
     transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.15s ease;
-    box-shadow: 0 4px 20px rgba(201, 168, 76, 0.35);
+    box-shadow: 0 4px 20px rgba(0, 200, 200, 0.35);
   }
   .btn-primary:hover {
-    background: #E8C97A;
-    box-shadow: 0 6px 28px rgba(201, 168, 76, 0.5);
+    background: #00E0E0;
+    box-shadow: 0 6px 28px rgba(0, 200, 200, 0.5);
     transform: translateY(-1px);
   }
 
@@ -94,9 +94,9 @@ body {
     transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
   }
   .card-corporate:hover {
-    border-color: rgba(201,168,76,0.35);
+    border-color: rgba(0,200,200,0.35);
     transform: translateY(-2px);
-    box-shadow: 0 16px 40px rgba(0,0,0,0.4), 0 0 24px rgba(201,168,76,0.06);
+    box-shadow: 0 16px 40px rgba(0,0,0,0.4), 0 0 24px rgba(0,200,200,0.06);
   }
 
   /* Dividers */

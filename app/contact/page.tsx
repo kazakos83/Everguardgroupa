@@ -76,12 +76,12 @@ export default function ContactPage() {
               </h2>
 
               {submitted ? (
-                <div className="p-8 text-center" style={{ background: 'rgba(201,168,76,0.05)', border: '1px solid rgba(201,168,76,0.2)', borderRadius: '6px' }}>
-                  <CheckCircle size={40} className="mx-auto mb-4" style={{ color: '#C9A84C' }} />
+                <div className="p-8 text-center" style={{ background: 'rgba(0,200,200,0.05)', border: '1px solid rgba(0,200,200,0.2)', borderRadius: '6px' }}>
+                  <CheckCircle size={40} className="mx-auto mb-4" style={{ color: '#00C8C8' }} />
                   <h3 className="font-display font-bold text-white text-xl mb-2">Enquiry sent</h3>
                   <p className="text-white/50 text-sm" style={{ fontFamily: 'var(--font-dm-sans)' }}>
                     Your email client should have opened. If it did not, email us directly at{' '}
-                    <a href="mailto:garry@everguard.com.au" style={{ color: '#C9A84C' }}>garry@everguard.com.au</a>
+                    <a href="mailto:garry@everguard.com.au" style={{ color: '#00C8C8' }}>garry@everguard.com.au</a>
                   </p>
                 </div>
               ) : (
@@ -105,7 +105,7 @@ export default function ContactPage() {
                           borderRadius: '4px',
                           fontFamily: 'var(--font-dm-sans)',
                         }}
-                        onFocus={(e) => { e.currentTarget.style.borderColor = 'rgba(201,168,76,0.4)' }}
+                        onFocus={(e) => { e.currentTarget.style.borderColor = 'rgba(0,200,200,0.4)' }}
                         onBlur={(e) => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.1)' }}
                       />
                     </div>
@@ -127,7 +127,7 @@ export default function ContactPage() {
                           borderRadius: '4px',
                           fontFamily: 'var(--font-dm-sans)',
                         }}
-                        onFocus={(e) => { e.currentTarget.style.borderColor = 'rgba(201,168,76,0.4)' }}
+                        onFocus={(e) => { e.currentTarget.style.borderColor = 'rgba(0,200,200,0.4)' }}
                         onBlur={(e) => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.1)' }}
                       />
                     </div>
@@ -152,7 +152,7 @@ export default function ContactPage() {
                           borderRadius: '4px',
                           fontFamily: 'var(--font-dm-sans)',
                         }}
-                        onFocus={(e) => { e.currentTarget.style.borderColor = 'rgba(201,168,76,0.4)' }}
+                        onFocus={(e) => { e.currentTarget.style.borderColor = 'rgba(0,200,200,0.4)' }}
                         onBlur={(e) => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.1)' }}
                       />
                     </div>
@@ -173,7 +173,7 @@ export default function ContactPage() {
                           borderRadius: '4px',
                           fontFamily: 'var(--font-dm-sans)',
                         }}
-                        onFocus={(e) => { e.currentTarget.style.borderColor = 'rgba(201,168,76,0.4)' }}
+                        onFocus={(e) => { e.currentTarget.style.borderColor = 'rgba(0,200,200,0.4)' }}
                         onBlur={(e) => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.1)' }}
                       />
                     </div>
@@ -195,7 +195,7 @@ export default function ContactPage() {
                         fontFamily: 'var(--font-dm-sans)',
                         color: formData.enquiryType ? 'white' : 'rgba(255,255,255,0.3)',
                       }}
-                      onFocus={(e) => { e.currentTarget.style.borderColor = 'rgba(201,168,76,0.4)' }}
+                      onFocus={(e) => { e.currentTarget.style.borderColor = 'rgba(0,200,200,0.4)' }}
                       onBlur={(e) => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.1)' }}
                     >
                       <option value="" style={{ background: '#0D1B2E' }}>Select enquiry type</option>
@@ -223,7 +223,7 @@ export default function ContactPage() {
                         borderRadius: '4px',
                         fontFamily: 'var(--font-dm-sans)',
                       }}
-                      onFocus={(e) => { e.currentTarget.style.borderColor = 'rgba(201,168,76,0.4)' }}
+                      onFocus={(e) => { e.currentTarget.style.borderColor = 'rgba(0,200,200,0.4)' }}
                       onBlur={(e) => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.1)' }}
                     />
                   </div>
@@ -250,7 +250,7 @@ export default function ContactPage() {
                 <div className="space-y-4">
                   <a href="mailto:garry@everguard.com.au" className="flex items-start gap-3 group">
                     <div className="w-9 h-9 shrink-0 flex items-center justify-center mt-0.5"
-                      style={{ background: 'rgba(201,168,76,0.08)', border: '1px solid rgba(201,168,76,0.15)', borderRadius: '4px', color: '#C9A84C' }}>
+                      style={{ background: 'rgba(0,200,200,0.08)', border: '1px solid rgba(0,200,200,0.15)', borderRadius: '4px', color: '#00C8C8' }}>
                       <Mail size={16} />
                     </div>
                     <div>
@@ -262,7 +262,7 @@ export default function ContactPage() {
                   </a>
                   <a href="tel:+61730070000" className="flex items-start gap-3 group">
                     <div className="w-9 h-9 shrink-0 flex items-center justify-center mt-0.5"
-                      style={{ background: 'rgba(201,168,76,0.08)', border: '1px solid rgba(201,168,76,0.15)', borderRadius: '4px', color: '#C9A84C' }}>
+                      style={{ background: 'rgba(0,200,200,0.08)', border: '1px solid rgba(0,200,200,0.15)', borderRadius: '4px', color: '#00C8C8' }}>
                       <Phone size={16} />
                     </div>
                     <div>
@@ -274,7 +274,7 @@ export default function ContactPage() {
                   </a>
                   <div className="flex items-start gap-3">
                     <div className="w-9 h-9 shrink-0 flex items-center justify-center mt-0.5"
-                      style={{ background: 'rgba(201,168,76,0.08)', border: '1px solid rgba(201,168,76,0.15)', borderRadius: '4px', color: '#C9A84C' }}>
+                      style={{ background: 'rgba(0,200,200,0.08)', border: '1px solid rgba(0,200,200,0.15)', borderRadius: '4px', color: '#00C8C8' }}>
                       <Clock size={16} />
                     </div>
                     <div>
@@ -290,9 +290,9 @@ export default function ContactPage() {
               <div className="divider-subtle" />
 
               {/* Confidentiality note */}
-              <div className="p-5" style={{ background: 'rgba(201,168,76,0.04)', border: '1px solid rgba(201,168,76,0.12)', borderRadius: '4px' }}>
+              <div className="p-5" style={{ background: 'rgba(0,200,200,0.04)', border: '1px solid rgba(0,200,200,0.12)', borderRadius: '4px' }}>
                 <div className="flex items-center gap-2 mb-3">
-                  <Shield size={16} style={{ color: '#C9A84C' }} />
+                  <Shield size={16} style={{ color: '#00C8C8' }} />
                   <span className="text-white text-sm font-semibold">Strict confidentiality</span>
                 </div>
                 <p className="text-white/40 text-xs leading-relaxed" style={{ fontFamily: 'var(--font-dm-sans)' }}>
@@ -312,7 +312,7 @@ export default function ContactPage() {
                     'Your role (claims manager, solicitor, etc.)',
                   ].map((item) => (
                     <li key={item} className="flex items-start gap-2">
-                      <CheckCircle size={13} className="shrink-0 mt-0.5" style={{ color: 'rgba(201,168,76,0.5)' }} />
+                      <CheckCircle size={13} className="shrink-0 mt-0.5" style={{ color: 'rgba(0,200,200,0.5)' }} />
                       <span className="text-white/40 text-xs leading-relaxed" style={{ fontFamily: 'var(--font-dm-sans)' }}>{item}</span>
                     </li>
                   ))}

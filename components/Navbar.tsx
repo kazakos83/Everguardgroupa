@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import Link from 'next/link'
+import Image from 'next/image'
 
 const navLinks = [
   { label: 'Services',  href: '/services' },
@@ -14,15 +15,14 @@ const navLinks = [
 function EverguardLogo() {
   return (
     <Link href="/" aria-label="Everguard Group — Home" className="flex items-center gap-3">
-      {/* Shield icon */}
-      <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style={{ flexShrink: 0 }}>
-        <path d="M14 2L4 6.5V13.5C4 19.2 8.4 24.6 14 26C19.6 24.6 24 19.2 24 13.5V6.5L14 2Z" fill="rgba(201,168,76,0.12)" stroke="#C9A84C" strokeWidth="1.5" strokeLinejoin="round"/>
-        <path d="M10 14L12.5 16.5L18 11" stroke="#C9A84C" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round"/>
-      </svg>
-      <span style={{ fontFamily: 'var(--font-geist-sans)', fontWeight: 800, fontSize: '16px', letterSpacing: '0.08em', textTransform: 'uppercase', lineHeight: 1, whiteSpace: 'nowrap' }}>
-        <span style={{ color: '#FFFFFF' }}>EVER</span>
-        <span style={{ color: '#C9A84C' }}>GUARD</span>
-      </span>
+      <Image
+        src="/everguard-logo.png"
+        alt="Everguard Group"
+        width={160}
+        height={36}
+        style={{ height: 'auto', width: 'auto', maxHeight: 36, objectFit: 'contain' }}
+        priority
+      />
     </Link>
   )
 }

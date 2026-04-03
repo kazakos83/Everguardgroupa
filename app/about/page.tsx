@@ -55,7 +55,7 @@ export default function AboutPage() {
       <main className="bg-[#0a0f1e] text-white">
         {/* Hero */}
         <section className="pt-32 pb-20 px-6 max-w-5xl mx-auto text-center">
-          <p className="text-[#c9a84c] uppercase tracking-widest text-sm font-semibold mb-4">
+          <p className="text-[#00C8C8] uppercase tracking-widest text-sm font-semibold mb-4">
             About Everguard Group
           </p>
           <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6">
@@ -91,30 +91,30 @@ export default function AboutPage() {
               </p>
             </div>
             <div className="bg-[#111827] rounded-2xl p-8 border border-gray-800">
-              <h3 className="text-xl font-semibold mb-6 text-[#c9a84c]">At a Glance</h3>
+              <h3 className="text-xl font-semibold mb-6 text-[#00C8C8]">At a Glance</h3>
               <ul className="space-y-4 text-gray-300">
                 <li className="flex items-start gap-3">
-                  <CheckCircle size={18} className="text-[#c9a84c] mt-0.5 shrink-0" />
+                  <CheckCircle size={18} className="text-[#00C8C8] mt-0.5 shrink-0" />
                   <span>Licensed investigators across all Australian states and territories</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <CheckCircle size={18} className="text-[#c9a84c] mt-0.5 shrink-0" />
+                  <CheckCircle size={18} className="text-[#00C8C8] mt-0.5 shrink-0" />
                   <span>Court-ready documentation and evidence management on every engagement</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <CheckCircle size={18} className="text-[#c9a84c] mt-0.5 shrink-0" />
+                  <CheckCircle size={18} className="text-[#00C8C8] mt-0.5 shrink-0" />
                   <span>Clearly scoped timelines and professional reporting on every engagement</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <CheckCircle size={18} className="text-[#c9a84c] mt-0.5 shrink-0" />
+                  <CheckCircle size={18} className="text-[#00C8C8] mt-0.5 shrink-0" />
                   <span>Strict confidentiality — client identities protected on every case</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <CheckCircle size={18} className="text-[#c9a84c] mt-0.5 shrink-0" />
+                  <CheckCircle size={18} className="text-[#00C8C8] mt-0.5 shrink-0" />
                   <span>Built to support insurance companies, law firms, and corporate clients</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <CheckCircle size={18} className="text-[#c9a84c] mt-0.5 shrink-0" />
+                  <CheckCircle size={18} className="text-[#00C8C8] mt-0.5 shrink-0" />
                   <span>Part of Everguard Group Pty Ltd — a purpose-built professional services group</span>
                 </li>
               </ul>
@@ -135,9 +135,9 @@ export default function AboutPage() {
               {values.map((v) => (
                 <div
                   key={v.title}
-                  className="bg-[#111827] rounded-2xl p-6 border border-gray-800 hover:border-[#c9a84c]/40 transition"
+                  className="bg-[#111827] rounded-2xl p-6 border border-gray-800 hover:border-[#00C8C8]/40 transition"
                 >
-                  <div className="text-[#c9a84c] mb-4">{v.icon}</div>
+                  <div className="text-[#00C8C8] mb-4">{v.icon}</div>
                   <h3 className="font-semibold text-white mb-2">{v.title}</h3>
                   <p className="text-gray-400 text-sm">{v.description}</p>
                 </div>
@@ -156,7 +156,7 @@ export default function AboutPage() {
             </p>
             <a
               href="/contact"
-              className="inline-flex items-center gap-2 bg-[#c9a84c] text-[#0a0f1e] font-semibold px-8 py-4 rounded-xl hover:bg-[#b8943d] transition"
+              className="inline-flex items-center gap-2 bg-[#00C8C8] text-[#0a0f1e] font-semibold px-8 py-4 rounded-xl hover:bg-[#00C8C8] transition"
             >
               Get in Touch
             </a>

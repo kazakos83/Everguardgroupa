@@ -179,7 +179,7 @@ export default function ServicesPage() {
               {capabilities.map((c) => (
                 <a key={c.id} href={`#${c.id}`}
                   className="text-xs font-semibold uppercase tracking-wider px-3 py-1.5 transition-colors"
-                  style={{ background: 'rgba(201,168,76,0.07)', border: '1px solid rgba(201,168,76,0.2)', borderRadius: '3px', color: '#C9A84C' }}>
+                  style={{ background: 'rgba(0,200,200,0.07)', border: '1px solid rgba(0,200,200,0.2)', borderRadius: '3px', color: '#00C8C8' }}>
                   {c.title}
                 </a>
               ))}
@@ -202,7 +202,7 @@ export default function ServicesPage() {
               <div>
                 <div className="flex items-center gap-4 mb-6">
                   <div className="w-12 h-12 flex items-center justify-center shrink-0"
-                    style={{ background: 'rgba(201,168,76,0.08)', border: '1px solid rgba(201,168,76,0.2)', borderRadius: '6px', color: '#C9A84C' }}>
+                    style={{ background: 'rgba(0,200,200,0.08)', border: '1px solid rgba(0,200,200,0.2)', borderRadius: '6px', color: '#00C8C8' }}>
                     {cap.icon}
                   </div>
                   <div>
@@ -222,7 +222,7 @@ export default function ServicesPage() {
                   <ul className="space-y-2.5">
                     {cap.capabilities.map((c) => (
                       <li key={c} className="flex items-start gap-2.5">
-                        <CheckCircle size={14} className="shrink-0 mt-0.5" style={{ color: '#C9A84C' }} />
+                        <CheckCircle size={14} className="shrink-0 mt-0.5" style={{ color: '#00C8C8' }} />
                         <span className="text-white/60 text-sm" style={{ fontFamily: 'var(--font-dm-sans)' }}>{c}</span>
                       </li>
                     ))}
@@ -233,7 +233,7 @@ export default function ServicesPage() {
                   <ul className="space-y-2.5">
                     {cap.deliverables.map((d) => (
                       <li key={d} className="flex items-start gap-2.5">
-                        <FileText size={14} className="shrink-0 mt-0.5" style={{ color: 'rgba(201,168,76,0.5)' }} />
+                        <FileText size={14} className="shrink-0 mt-0.5" style={{ color: 'rgba(0,200,200,0.5)' }} />
                         <span className="text-white/55 text-sm" style={{ fontFamily: 'var(--font-dm-sans)' }}>{d}</span>
                       </li>
                     ))}
@@ -256,7 +256,7 @@ export default function ServicesPage() {
             ].map((item) => (
               <div key={item.title} className="flex gap-4">
                 <div className="w-10 h-10 shrink-0 flex items-center justify-center"
-                  style={{ background: 'rgba(201,168,76,0.08)', border: '1px solid rgba(201,168,76,0.15)', borderRadius: '4px', color: '#C9A84C' }}>
+                  style={{ background: 'rgba(0,200,200,0.08)', border: '1px solid rgba(0,200,200,0.15)', borderRadius: '4px', color: '#00C8C8' }}>
                   {item.icon}
                 </div>
                 <div>
