@@ -1,91 +1,79 @@
-
 import Link from 'next/link'
-import Image from 'next/image'
-import { Phone, Mail, MapPin, Shield, CheckCircle } from 'lucide-react'
 
-const Footer = () => {
+const services = [
+  { label: 'Insurance Investigations', href: '/services' },
+  { label: 'Workers Compensation',     href: '/services' },
+  { label: 'Surveillance',             href: '/services' },
+  { label: 'Fraud Investigations',     href: '/services' },
+  { label: 'Litigation Support',       href: '/services' },
+]
+
+const company = [
+  { label: 'About Us',  href: '/about' },
+  { label: 'Partners',  href: '/partners' },
+  { label: 'Contact',   href: '/contact' },
+]
+
+function FooterLinkGroup({ heading, links }: { heading: string; links: { label: string; href: string }[] }) {
   return (
-    <footer className="bg-gray-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {/* Company Info */}
-          <div className="space-y-4">
-            <div className="relative w-48 h-12">
-              <Image
-                src="/everguard-logo.png"
-                alt="Everguard Intelligence"
-                fill
-                className="object-contain filter brightness-0 invert"
-              />
-            </div>
-            <p className="text-gray-300 text-sm leading-relaxed">
-              Specialist private investigation and intelligence services across Australia. 
-              Trusted by insurers, legal professionals, corporations, and government agencies.
+    <div className="flex flex-col gap-3">
+      <p className="text-white/40 text-xs font-semibold uppercase tracking-widest mb-1" style={{ fontFamily: 'var(--font-geist-sans)' }}>
+        {heading}
+      </p>
+      {links.map((link) => (
+        <Link key={link.label} href={link.href} className="text-sm text-white/50 hover:text-white transition-colors duration-150" style={{ fontFamily: 'var(--font-dm-sans)' }}>
+          {link.label}
+        </Link>
+      ))}
+    </div>
+  )
+}
+
+export default function Footer() {
+  return (
+    <footer className="border-t" style={{ background: '#060D18', borderColor: 'rgba(255,255,255,0.05)' }}>
+      <div className="max-w-[1280px] mx-auto px-6 lg:px-8 py-16 lg:py-20">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-14">
+
+          {/* Brand */}
+          <div className="sm:col-span-2 lg:col-span-2">
+            <Link href="/" className="inline-flex items-center gap-3 mb-5" aria-label="Everguard Group">
+              <svg width="26" height="26" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M14 2L4 6.5V13.5C4 19.2 8.4 24.6 14 26C19.6 24.6 24 19.2 24 13.5V6.5L14 2Z" fill="rgba(201,168,76,0.1)" stroke="#C9A84C" strokeWidth="1.5" strokeLinejoin="round"/>
+                <path d="M10 14L12.5 16.5L18 11" stroke="#C9A84C" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+              <span className="text-xl font-bold" style={{ fontFamily: 'var(--font-geist-sans)', letterSpacing: '0.06em', textTransform: 'uppercase' }}>
+                EVER<span style={{ color: '#C9A84C' }}>GUARD</span>
+              </span>
+            </Link>
+            <p className="text-white/50 text-sm leading-relaxed mb-3 max-w-[300px]" style={{ fontFamily: 'var(--font-dm-sans)' }}>
+              Everguard Group Pty Ltd — Licensed investigations and intelligence services for insurance companies, law firms, and corporate clients across Australia.
             </p>
-            <div className="flex items-center space-x-2 text-red-400">
-              <CheckCircle className="h-4 w-4" />
-              <span className="text-sm font-medium">Professional & Licensed</span>
-            </div>
+            <p className="text-white/25 text-xs mb-2" style={{ fontFamily: 'var(--font-dm-sans)' }}>
+              Everguard Group Pty Ltd
+            </p>
+            <p className="text-white/25 text-xs" style={{ fontFamily: 'var(--font-dm-sans)' }}>
+              All investigators hold current Australian private investigator licences.
+            </p>
           </div>
 
-          {/* Services */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4 text-red-400">Services</h3>
-            <ul className="space-y-2 text-sm">
-              <li><Link href="/services#surveillance" className="text-gray-300 hover:text-red-400 transition-colors">Surveillance Operations</Link></li>
-              <li><Link href="/services#factual" className="text-gray-300 hover:text-red-400 transition-colors">Factual Investigations</Link></li>
-              <li><Link href="/services#corporate" className="text-gray-300 hover:text-red-400 transition-colors">Corporate Intelligence</Link></li>
-              <li><Link href="/services#background" className="text-gray-300 hover:text-red-400 transition-colors">Background Checks</Link></li>
-              <li><Link href="/services#fraud" className="text-gray-300 hover:text-red-400 transition-colors">Fraud Investigations</Link></li>
-            </ul>
-          </div>
-
-          {/* Contact Info */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4 text-red-400">Contact</h3>
-            <ul className="space-y-3 text-sm">
-              <li className="flex items-center space-x-3">
-                <Phone className="h-4 w-4 text-red-400" />
-                <span className="text-gray-300">1300 718 760</span>
-              </li>
-              <li className="flex items-center space-x-3">
-                <Mail className="h-4 w-4 text-red-400" />
-                <span className="text-gray-300">info@everguardgroup.com.au</span>
-              </li>
-              <li className="flex items-start space-x-3">
-                <MapPin className="h-4 w-4 text-red-400 mt-0.5" />
-                <span className="text-gray-300">Australia-wide Coverage<br />All States & Territories</span>
-              </li>
-            </ul>
-          </div>
-
-          {/* Industries */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4 text-red-400">Industries</h3>
-            <ul className="space-y-2 text-sm text-gray-300">
-              <li>Insurance Companies</li>
-              <li>Corporate Enterprises</li>
-              <li>Government Agencies</li>
-              <li>Legal Firms</li>
-              <li>Financial Institutions</li>
-            </ul>
-          </div>
+          <FooterLinkGroup heading="Services" links={services} />
+          <FooterLinkGroup heading="Company"  links={company}  />
         </div>
 
-        <div className="border-t border-gray-800 mt-8 pt-8 text-center">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <p className="text-gray-400 text-sm">
-              © 2024 Everguard Group. All rights reserved.
-            </p>
-            <div className="flex items-center space-x-6 text-sm">
-              <Link href="/contact" className="text-gray-400 hover:text-red-400 transition-colors">Contact Us</Link>
-              <Link href="/about" className="text-gray-400 hover:text-red-400 transition-colors">About</Link>
-            </div>
+        <div className="divider-subtle mb-6" />
+
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-3">
+          <p className="text-white/25 text-sm" style={{ fontFamily: 'var(--font-dm-sans)' }}>
+            &copy; {new Date().getFullYear()} Everguard Group Pty Ltd. All rights reserved.
+          </p>
+          <div className="flex items-center gap-1 text-white/25 text-sm" style={{ fontFamily: 'var(--font-dm-sans)' }}>
+            <a href="/privacy" className="hover:text-white/50 transition-colors duration-150">Privacy Policy</a>
+            <span className="mx-2 text-white/15">&middot;</span>
+            <a href="/terms" className="hover:text-white/50 transition-colors duration-150">Terms of Service</a>
           </div>
         </div>
       </div>
     </footer>
   )
 }
-
-export default Footer

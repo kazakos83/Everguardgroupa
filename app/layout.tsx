@@ -1,21 +1,28 @@
-
-import './globals.css'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import { ThemeProvider } from '@/components/theme-provider'
-import { Toaster } from 'sonner'
+import { GeistSans } from 'geist/font/sans'
+import { GeistMono } from 'geist/font/mono'
+import { DM_Sans } from 'next/font/google'
+import './globals.css'
 
-const inter = Inter({ subsets: ['latin'] })
+const dmSans = DM_Sans({
+  subsets: ['latin'],
+  weight: ['400', '500', '600'],
+  variable: '--font-dm-sans',
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
-  title: 'Everguard Group | Specialist Private Investigation & Intelligence Services Australia',
-  description: 'Licensed private investigation and intelligence agency providing surveillance, factual investigations, corporate intelligence, and background checks across Australia. Discreet, professional, court-ready.',
-  keywords: 'private investigator, surveillance, insurance investigations, factual investigations, corporate intelligence, background checks, due diligence, Australia investigator, licensed investigator',
-  authors: [{ name: 'Everguard Group' }],
+  title: 'Everguard Group — Licensed Investigations & Intelligence',
+  description:
+    'Everguard Group provides licensed private investigators and intelligence specialists for insurance companies, law firms, and corporate clients across Australia. Professional, discreet, and confidential.',
+  keywords:
+    'private investigators Australia, insurance investigations, workers compensation fraud, surveillance investigations, litigation support, court-ready reports, fraud investigations Queensland',
   openGraph: {
-    title: 'Everguard Group | Specialist Private Investigation & Intelligence Services Australia',
-    description: 'Licensed private investigation and intelligence agency providing discreet surveillance, factual investigations, and corporate intelligence across Australia.',
+    title: 'Everguard Group — Licensed Investigations & Intelligence',
+    description:
+      'Licensed investigators across Australia. Professional, discreet, and confidential for insurers, law firms, and corporate clients.',
     type: 'website',
+    locale: 'en_AU',
   },
 }
 
@@ -25,16 +32,15 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={inter.className} suppressHydrationWarning>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="light"
-          enableSystem={false}
-        >
-          {children}
-          <Toaster position="top-right" richColors />
-        </ThemeProvider>
+    <html
+      lang="en-AU"
+      className={`scroll-smooth ${GeistSans.variable} ${GeistMono.variable} ${dmSans.variable}`}
+    >
+      <body
+        className="bg-[#060D18] text-white antialiased font-body"
+        style={{ fontFamily: 'var(--font-dm-sans), system-ui, sans-serif' }}
+      >
+        {children}
       </body>
     </html>
   )
